@@ -1,0 +1,23 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+ws:
+  name: ws
+  version: v1
+  replicaCount: 1
+  image:
+    repository: uk.icr.io/prometeo-cluster/ws
+    tag: v1
+    pullPolicy: IfNotPresent
+  livenessProbe:
+    initialDelaySeconds: 30
+    periodSeconds: 10
+  service:
+    servicePort: 8080
+istio:
+  virtualservices:
+    enabled: true
+  gateway:
+    enabled: no
+imagepullsecrets:
+  name: default-uk-icr-io
+
