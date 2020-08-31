@@ -6,8 +6,7 @@ This repository contains the [Prometeo](https://github.com/Code-and-Response/Pro
 
 ## Setting up the solution
 
-* Install Android Studio
-* Add Samsung SDKs for the device and the watch
+* To come
 
 ## Contributing
 
