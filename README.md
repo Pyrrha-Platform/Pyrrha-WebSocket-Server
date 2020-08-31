@@ -1,6 +1,6 @@
-# Prometeo watch app
+# Prometeo WebSocket server
 
-This repository contains the [Prometeo](https://github.com/Code-and-Response/Prometeo) solution application that targets Samsung watches paired with the [sensor device](https://github.com/Code-and-Response/Prometeo-Firmware) and Samsung [smartphone](https://github.com/Code-and-Response/Prometeo-Mobile-App) carried by the firefighters.
+This repository contains the [Prometeo](https://github.com/Code-and-Response/Prometeo) solution that monitors the MQTT queue for new messages and in turn sends them to the [web application dashboard]().
 
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://join.slack.com/t/code-and-response/shared_invite/enQtNzkyMDUyODg1NDU5LTdkZDhmMjJkMWI1MDk1ODc2YTc2OTEwZTI4MGI3NDI0NmZmNTg0Zjg5NTVmYzNiNTYzNzRiM2JkZjYzOWIwMWE)
 
