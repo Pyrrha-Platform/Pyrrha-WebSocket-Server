@@ -19,16 +19,18 @@ client.on('connect', function (connection) {
         if (message.type === 'utf8') {
             console.log("Received: '" + message.utf8Data + "'");
         }
-    });
+    }); 
 
     function sendNumber() {
         if (connection.connected) {
             var number = Math.round(Math.random() * 0xFFFFFF);
+            console.log(`sending number: ${number}`);
             connection.sendUTF(number.toString());
             setTimeout(sendNumber, 1000);
         }
     }
-    sendNumber();
+    // sendNumber();
 });
 
-client.connect('ws://159.122.217.91/ws', 'echo-protocol');
+// client.connect('ws://159.122.217.91/ws', 'echo-protocol'); 
+client.connect('ws://localhost:8080', 'echo-protocol'); 
