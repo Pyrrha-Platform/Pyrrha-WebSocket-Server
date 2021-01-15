@@ -3,9 +3,18 @@
   "private": false,
   "version": "0.0.1",
   "description": "Basic websockets server and nginx",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon server.js",
+    "production": "node server.js",
+    "development": "node_modules/.bin/nodemon server.js",
+    "debug": "node_modules/.bin/nodemon --inspect=0.0.0.0 server.js",
+    "lint": "standard --fix"
+  },
   "dependencies": {
     "express": "4.x",
+    "nodemon": "^2.0.6",
     "websocket": "^1.0.31",
+    "winston": "^3.3.3",
     "ws": "^7.3.0"
   }
 }

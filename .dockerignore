@@ -1,0 +1,9 @@
+# ignore .git and .cache folders
+.git
+.cache
+skaffold.yaml
+deploy.sh
+*.md
+!README*.md
+node_modules
+npm-debug.log

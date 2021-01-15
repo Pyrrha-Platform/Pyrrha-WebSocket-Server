@@ -1,14 +1,39 @@
 apiVersion: skaffold/v2beta6
 kind: Config
-build:
-  artifacts:
-  - image: uk.icr.io/prometeo-cluster/ws
-deploy:
-  helm:
-    releases:
-    - name: ws
-      chartPath: chart/ws
-      artifactOverrides:
-        mqttclient:
-          image:
-            repository: uk.icr.io/prometeo-cluster/ws
+
+profiles:
+  - name: test
+    activation:
+      - command: test
+    build:
+      artifacts:
+      - image: uk.icr.io/prometeo-cluster/ws
+    deploy:
+      helm:
+        releases:
+        - name: ws
+          chartPath: chart/ws
+          artifactOverrides:
+            ws:
+              image:
+                repository: uk.icr.io/prometeo-cluster/ws
+          overrides:
+            ws:
+              namespace: test
+  - name: default
+    activation:
+      - command: default
+    build:
+      artifacts:
+      - image: uk.icr.io/prometeo-cluster/ws
+    deploy:
+      helm:
+        releases:
+        - name: ws
+          chartPath: chart/ws
+          artifactOverrides:
+            ws:
+              image:
+                repository: uk.icr.io/prometeo-cluster/ws
+        
+              
