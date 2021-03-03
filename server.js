@@ -24,7 +24,6 @@ wss.on('connection', function connection(ws, req) {
 
   const ip = req.socket.remoteAddress;
   logger.info(`new client connected: ${ip}`);
-
   // set up alive check to terminate if client does not pong back
   ws.isAlive = true;
   ws.on('pong', heartbeat);
@@ -40,17 +39,30 @@ wss.on('connection', function connection(ws, req) {
       }
     });
   });
+
+  ws.on('close', function (code, reason) {
+    console.log('connection closed by remote');
+    console.log(`this._socket.remoteAddress: ${this._socket.remoteAddress}`)
+    console.log(`code: ${code}`);
+    console.log(`reason: ${reason}`);
+  })
 });
 
 const interval = setInterval(function ping() {
   wss.clients.forEach(function each(ws) {
-    if (ws.isAlive === false) return ws.terminate();
-
+    logger.info(`checking if client is still alive`);
+    logger.info(JSON.stringify(ws._socket.address()));
+    if (ws.isAlive === false) {
+      logger.info('logger, connection no longer alive, terminating')
+      return ws.terminate();
+    }
     ws.isAlive = false;
     ws.ping(noop);
+    logger.info('client is still alive.')
   });
 }, 30000);
 
 wss.on('close', function close() {
+  logger.info(`connection closed`);
   clearInterval(interval);
 });
