@@ -1,5 +1,5 @@
 # Pyrrha WebSocket server
-
+ 
 This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha) solution that monitors the MQTT queue for new messages and in turn sends them to the [Websocker Server](https://github.com/Pyrrha-Platform/Pyrrha-WebSocket-Server) and also stores them in the [database](https://github.com/Pyrrha-Platform/Pyrrha-Database).
 
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack)
