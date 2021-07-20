@@ -1,12 +1,10 @@
 FROM docker.io/node:12-alpine
 
-WORKDIR /
+WORKDIR /user-app
 
 COPY package*.json ./
 
 RUN npm ci --only=production
-
-WORKDIR /user-app
 
 COPY --chown=1001:0 . .
 RUN chmod -R g=u .
