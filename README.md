@@ -41,14 +41,7 @@ This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha)
    ```
 
 ### Running on Kubernetes
-1. The project uses [helm](https://helm.sh/) charts to deploy the service to Kubernetes. You can use the following command to see what the final charts look like:
-    ```
-    helm template <chart_name> chart/ws --dry-run  
-    ```
-2. You can use the following command to install the charts on Kubernets, but we suggest creating a CI/CD pipeline to automate code testing and deployment in your cluster.
-   ```
-   helm upgrade <chart_name> chart/ws -i 
-   ```
+1. Please read [KUBERNETES_SETUP.md](https://github.com/Pyrrha-Platform/Pyrrha/blob/main/KUBERNETES_SETUP.md) for details on how to deploy using Kubernetes. 
 
 
 ## Contributing
