@@ -1,7 +1,8 @@
 name: linter
 
 on:
-  push: # Execute on every push to the master branch. Merging a pull request counts as a push.
+  # Execute on every pull request to the master branch
+  pull_request_target:
     branches:
       - main
 
@@ -9,7 +10,7 @@ jobs:
   linter:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set up node
         uses: actions/setup-node@v1
