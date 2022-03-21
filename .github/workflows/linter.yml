@@ -1,10 +1,6 @@
 name: linter
 
 on:
-  # Execute on every push to any branch
-  push:
-    branches:
-      - "**"
   # Execute on every pull request to the master branch
   pull_request_target:
     branches:
@@ -14,7 +10,7 @@ jobs:
   linter:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Set up node
         uses: actions/setup-node@v1
