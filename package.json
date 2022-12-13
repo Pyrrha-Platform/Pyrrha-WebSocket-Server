@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "express": "4.x",
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.20",
     "websocket": "^1.0.31",
     "winston": "^3.3.3",
     "ws": "^7.4.6"
