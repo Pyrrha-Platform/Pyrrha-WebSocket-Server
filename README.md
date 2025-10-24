@@ -9,10 +9,10 @@ This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha)
 ### Prerequisites
 
 1. [Docker](https://docs.docker.com/desktop/)
-2. [IBM CLI](https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli)
-3. [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-4. [Helm](https://helm.sh/docs/intro/install/)
-5. [Skaffold](https://skaffold.dev/docs/install/)
+1. [IBM CLI](https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli)
+1. [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+1. [Helm](https://helm.sh/docs/intro/install/)
+1. [Skaffold](https://skaffold.dev/docs/install/)
 
 ### Run locally with Node.js
 
@@ -22,7 +22,7 @@ This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha)
    npm install
    ```
 
-2. Run server
+1. Run server
 
    ```bash
    npm start
@@ -45,7 +45,7 @@ This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha)
     STEP 3: COPY package*.json ./
    ```
 
-2. Run the image
+1. Run the image
 
    ```bash
    docker run --name ws ws:latest
