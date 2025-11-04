@@ -1,8 +1,12 @@
 # Pyrrha WebSocket server
 
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/static/v1?label=Slack&message=%23prometeo-pyrrha&color=blue)](https://callforcode.org/slack)
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Slack](https://img.shields.io/static/v1?label=Slack&message=%23prometeo-pyrrha&color=blue)](https://callforcode.org/slack)
 
-This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha) solution that monitors the MQTT queue for new messages, stores them in the [database](https://github.com/Pyrrha-Platform/Pyrrha-Database), and in turn sends them to the [Websocker Server](https://github.com/Pyrrha-Platform/Pyrrha-WebSocket-Server)s.
+This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha) solution that
+monitors the MQTT queue for new messages, stores them in the
+[database](https://github.com/Pyrrha-Platform/Pyrrha-Database), and in turn sends them to the
+[Websocker Server](https://github.com/Pyrrha-Platform/Pyrrha-WebSocket-Server)s.
 
 ## Setting up the solution
 
@@ -53,11 +57,14 @@ This repository contains the [Pyrrha](https://github.com/Pyrrha-Platform/Pyrrha)
 
 ### Running on Kubernetes
 
-1. Please read [KUBERNETES_SETUP.md](https://github.com/Pyrrha-Platform/Pyrrha/blob/main/KUBERNETES_SETUP.md) for details on how to deploy using Kubernetes.
+1. Please read
+   [KUBERNETES_SETUP.md](https://github.com/Pyrrha-Platform/Pyrrha/blob/main/KUBERNETES_SETUP.md)
+   for details on how to deploy using Kubernetes.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting Pyrrha pull requests.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process
+for submitting Pyrrha pull requests.
 
 ## License
 
